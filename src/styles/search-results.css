@@ -1,0 +1,10 @@
+.image-results {
+  display: flex;
+  width: 80%;
+}
+
+.card-image {
+  height: 350px;
+  width: 500px;
+  justify-content: center;
+}

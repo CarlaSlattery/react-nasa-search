@@ -6,7 +6,7 @@ import SearchResults from "./SearchResults";
 
 const App = () => {
   const [searchResults, setSearchResults] = useState([]);
-  console.log(searchResults);
+  searchResults.map((e) => console.log(e));
   return (
     <div className="app">
       <img
@@ -15,7 +15,7 @@ const App = () => {
         alt="nasaLogo"
       />
       <Search setSearchResults={setSearchResults} />
-      <SearchResults />
+      <SearchResults results={searchResults} />
     </div>
   );
 };
