@@ -1,7 +1,6 @@
 .image-container {
   box-sizing: border-box;
   display: flex;
-
   margin: 0 auto;
   margin-top: 30px;
   flex-wrap: wrap;

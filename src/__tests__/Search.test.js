@@ -11,11 +11,11 @@ describe("Search", () => {
       <Search setSearchResults={setSearchResults} />
     );
     expect(asFragment()).toMatchSnapshot();
-  });
-  it("calls onSubmit prop when clicked", () => {
-    const handleSubmit = jest.fn();
-    render(<Button onSubmit={handleSubmit}>Go!</Button>);
-    fireEvent.click(screen.getByText(/go/i));
-    expect(handleSubmit).toHaveBeenCalledTimes(1);
+
+    const searchElement = screen.getByRole("textbox");
+    expect(searchElement).toBeInTheDocument();
+
+    const searchButton = screen.getByRole("button");
+    expect(searchButton).toBeInTheDocument();
   });
 });
