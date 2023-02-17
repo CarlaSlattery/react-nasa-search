@@ -11,6 +11,11 @@ form {
 input,
 button {
   justify-content: space-between;
+  margin-top: 10px;
+}
+
+input {
+  padding: 2px;
 }
 
 .search-input {
@@ -23,7 +28,7 @@ button {
 }
 
 button {
-  background-color: blue;
+  background-color: #c40013;
   color: white;
   padding: 10px 40px;
   border-radius: 5px;

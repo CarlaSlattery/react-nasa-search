@@ -17,6 +17,7 @@ const Search = ({ setSearchResults, setLoading }) => {
         <input
           className="search-input"
           type="text"
+          placeholder="Enter your search"
           onChange={(e) => setValue(e.target.value)}
         />
         <button className="search-btn" type="submit">
