@@ -1,5 +1,6 @@
 import "../styles/app.css";
 import "../styles/search.css";
+
 import React from "react";
 import {
   createBrowserRouter,
