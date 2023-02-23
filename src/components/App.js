@@ -1,25 +1,32 @@
 import "../styles/app.css";
 import "../styles/search.css";
 
-import React, { useState } from "react";
+import React from "react";
+import {
+  createBrowserRouter,
+  Route,
+  createRoutesFromElements,
+  RouterProvider,
+} from "react-router-dom";
+//pages
 
-import Search from "./Search.js";
-import SearchResults from "./SearchResults.js";
-import logo from "../assets/logo.png";
+import Home from "./Home.js";
+import Planets from "./Planets.js";
+
+//layouts
+import RootLayout from "./Rootlayout.js";
 
 const App = () => {
-  const [searchResults, setSearchResults] = useState([]);
-  const [loading, setLoading] = useState(true);
-  searchResults.map((e) => console.log(e));
-  return (
-    <div className="app">
-      <img className="nasa-logo" src={logo} alt="nasaLogo" />
-
-      <Search setSearchResults={setSearchResults} setLoading={setLoading} />
-
-      <SearchResults results={searchResults} loading={loading} />
-    </div>
+  const router = createBrowserRouter(
+    createRoutesFromElements(
+      <Route path="/" element={<RootLayout />}>
+        <Route index element={<Home />} />
+        <Route path="planets" element={<Planets />} />
+      </Route>
+    )
   );
+
+  return <RouterProvider router={router} />;
 };
 
 export default App;
